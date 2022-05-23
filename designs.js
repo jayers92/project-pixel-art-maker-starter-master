@@ -1,27 +1,20 @@
-const tableCanvas = document.getElementById('pixelCanvas').addEventListener("click", makeGrid)
-const color = document.getElementById('colorPicker');
-​const addRow = document.getElementById('inputHeight');
-const addColumn = document.getElementById('inputWidth');
-​
-​
-const form = document.getElementId('sizePicker');
+const form = document.getElementById('sizePicker');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();  
+    const tblElement = document.getElementById('pixelCanvas');
 
-form.addEventListener('submit', Function(Event) {
-    
-});
-
-for(let x = 0; i < 21; i++){
-    let numRow = document.createElement("tr");
-    numRow.id = "row + i";
-
-    tbl.appendChild(numRow)
-    let rowW = document.getElementById("row" + i);
-
-    for(let j = 0; j < 21; j++){
-        let myCell = document.createElement("td");
-        rowW.appendChild(myCell);
+    for (let x = 0; x < 31; x = x + 1);{
+        const rowElement = document.createElement('tr');
+        tblElement.appendChild(rowElement);
     }
- 
- }
+        for(let j = 0; j < 31; j = j + 1);{
+            const columnElement = rowElement.insertCell();
+            rowElement.appendChild(columnElement);
+        }
+            columnElement.addEventListener('click', function(event) {
+                const color = document.getElementById('colorPicker').value;
+                event.target.style.backgroundColor = color;
+            });
+        });
 
 
