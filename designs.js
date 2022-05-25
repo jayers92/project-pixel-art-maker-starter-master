@@ -9,7 +9,7 @@ form.addEventListener("submit", function(event) {
 	for (let x = 0; x < numHeight; x = x + 1) {
 		const rowElement = document.createElement("tr");
 		tblElement.appendChild(rowElement);
-////created a variable by grabbing the width input element
+//created a variable by grabbing the width input element
 		const numWidth = document.getElementById("inputWidth").value;
 
 		for (let y = 0; y < numWidth; y = y + 1) {
